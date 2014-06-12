@@ -1,0 +1,101 @@
+Name         : kde5-baseapps
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : Collection of applications used for file and Internet browsing
+Description  : |
+  Collection of applications used for file and Internet browsing
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kde5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - zlib-devel
+    - kf5-karchive-devel
+    - kf5-kbookmarks-devel
+    - kf5-kcoreaddons-devel
+    - kf5-kconfig-devel
+    - kf5-kconfigwidgets-devel
+    - kf5-kdbusaddons-devel
+    - kf5-kio-devel
+    - kf5-kdelibs4support-devel
+    - kf5-kparts-devel
+    - kf5-kdesu-devel
+    - kf5-kactivities-libs-devel
+    - kf5-knewstuff-devel
+    - kf5-kfilemetadata-devel
+    - kf5-kcmutils-devel
+    - kf5-baloo-devel
+    - kf5-baloo-widgets-devel
+    - phonon-qt5-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5PrintSupport
+    - Qt5Script
+Requires:
+    - kde5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COPYING COPYING.LIB"
+    - "%{_kde5_bindir}/dolphin"
+    - "%{_kde5_bindir}/kdialog"
+    - "%{_kde5_bindir}/kfind"
+    - "%{_kde5_bindir}/kdepasswd"
+    - "%{_kde5_bindir}/servicemenuinstallation"
+    - "%{_kde5_bindir}/servicemenudeinstallation"
+    - "%{_kde5_plugindir}/*.so"
+    - "%{_kde5_libdir}/libkonq.so.*"
+    - "%{_kde5_libdir}/libdolphinprivate.so.*"
+    - "%{_kde5_libdir}/libkdeinit4_dolphin.so"
+    - "%{_kde5_datadir}/kbookmark/directory_bookmarkbar.desktop"
+    - "%{_kde5_datadir}/kdm/"
+    - "%{_kde5_datadir}/konqueror/"
+    - "%{_kde5_datadir}/dolphin"
+    - "%{_kde5_datadir}/dolphinpart"
+    - "%{_datadir}/kservices5/"
+    - "%{_datadir}/kservicetypes5/"
+    - "%{_datadir}/templates/"
+    - "%{_datadir}/applications/"
+    - "%{_datadir}/config.kcfg/"
+    - "%{_datadir}/dbus-1/"
+    - "%{_datadir}/icons/hicolor/"
+    - "%{_kde5_sysconfdir}/xdg/servicemenu.knsrc"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Files:
+          - "%{_kde5_includedir}/*.h"
+          - "%{_kde5_libdir}/libkonq.so"
+          - "%{_kde5_libdir}/libdolphinprivate.so"
