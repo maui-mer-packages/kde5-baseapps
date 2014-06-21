@@ -46,10 +46,10 @@ BuildRequires:  kf5-kparts-devel
 BuildRequires:  kf5-kdesu-devel
 BuildRequires:  kf5-kactivities-libs-devel
 BuildRequires:  kf5-knewstuff-devel
+BuildRequires:  kf5-kfilemetadata-devel
 BuildRequires:  kf5-kcmutils-devel
-BuildRequires:  kde5-baloo-devel
-BuildRequires:  kde5-baloo-widgets-devel
-BuildRequires:  kde5-kfilemetadata-devel
+BuildRequires:  kf5-baloo-devel
+BuildRequires:  kf5-baloo-widgets-devel
 BuildRequires:  phonon-qt5-devel
 
 %description
