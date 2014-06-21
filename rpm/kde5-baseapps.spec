@@ -30,10 +30,10 @@ BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  pkgconfig(Qt5PrintSupport)
 BuildRequires:  pkgconfig(Qt5Script)
+BuildRequires:  pkgconfig(zlib)
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
-BuildRequires:  zlib-devel
 BuildRequires:  kf5-karchive-devel
 BuildRequires:  kf5-kbookmarks-devel
 BuildRequires:  kf5-kcoreaddons-devel

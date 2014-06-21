@@ -25,7 +25,6 @@ PkgBR:
     - kde5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - zlib-devel
     - kf5-karchive-devel
     - kf5-kbookmarks-devel
     - kf5-kcoreaddons-devel
@@ -54,6 +53,7 @@ PkgConfigBR:
     - Qt5Test
     - Qt5PrintSupport
     - Qt5Script
+    - zlib
 Requires:
     - kde5-filesystem
 
