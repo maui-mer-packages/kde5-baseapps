@@ -38,10 +38,10 @@ PkgBR:
     - kf5-kdesu-devel
     - kf5-kactivities-libs-devel
     - kf5-knewstuff-devel
-    - kf5-kfilemetadata-devel
     - kf5-kcmutils-devel
-    - kf5-baloo-devel
-    - kf5-baloo-widgets-devel
+    - kde5-baloo-devel
+    - kde5-baloo-widgets-devel
+    - kde5-kfilemetadata-devel
     - phonon-qt5-devel
 PkgConfigBR:
     - Qt5Core
