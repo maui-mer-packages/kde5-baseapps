@@ -116,7 +116,7 @@ fi
 %{_kde5_plugindir}/*.so
 %{_kde5_libdir}/libkonq.so.*
 %{_kde5_libdir}/libdolphinprivate.so.*
-%{_kde5_libdir}/libkdeinit4_dolphin.so
+%{_kde5_libdir}/libkdeinit5_dolphin.so
 %{_kde5_datadir}/kbookmark/directory_bookmarkbar.desktop
 %{_kde5_datadir}/kdm/
 %{_kde5_datadir}/konqueror/
