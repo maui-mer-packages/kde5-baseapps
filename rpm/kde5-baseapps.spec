@@ -89,18 +89,20 @@ rm -rf %{buildroot}
 # << install pre
 
 # >> install post
+# << install post
+
 %post
+# >> post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+# << post
 
 %postun
+# >> postun
 if [ $1 -eq 0 ] ; then
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 fi
-
-%posttrans
-/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-# << install post
+# << postun
 
 %files
 %defattr(-,root,root,-)
