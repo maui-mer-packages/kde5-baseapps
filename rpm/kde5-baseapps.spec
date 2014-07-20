@@ -114,9 +114,12 @@ fi
 %{_kde5_bindir}/servicemenuinstallation
 %{_kde5_bindir}/servicemenudeinstallation
 %{_kde5_plugindir}/*.so
+%{_kde5_libdir}/libKF5Konq.so.*
 %{_kde5_libdir}/libdolphinprivate.so.*
 %{_kde5_libdir}/libkdeinit5_dolphin.so
 %{_kde5_datadir}/dolphinpart
+%{_kde5_datadir}/kf5/kbookmark
+%{_kde5_datadir}/kf5/konqueror
 %{_datadir}/kservices5/
 %{_datadir}/kservicetypes5/
 %{_datadir}/templates/
@@ -125,11 +128,14 @@ fi
 %{_datadir}/dbus-1/
 %{_datadir}/icons/hicolor/
 %{_kde5_sysconfdir}/xdg/servicemenu.knsrc
+%{_mandir}/man1/*
 # >> files
 # << files
 
 %files devel
 %defattr(-,root,root,-)
+%{_kde5_libdir}/libKF5Konq.so
+%{_kde5_includedir}/*
 %{_kde5_libdir}/libdolphinprivate.so
 # >> files devel
 # << files devel
