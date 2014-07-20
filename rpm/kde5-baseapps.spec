@@ -130,7 +130,6 @@ fi
 
 %files devel
 %defattr(-,root,root,-)
-%{_kde5_includedir}/*.h
 %{_kde5_libdir}/libdolphinprivate.so
 # >> files devel
 # << files devel

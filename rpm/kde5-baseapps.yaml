@@ -91,5 +91,4 @@ SubPackages:
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Files:
-          - "%{_kde5_includedir}/*.h"
           - "%{_kde5_libdir}/libdolphinprivate.so"
