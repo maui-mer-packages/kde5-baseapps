@@ -114,13 +114,8 @@ fi
 %{_kde5_bindir}/servicemenuinstallation
 %{_kde5_bindir}/servicemenudeinstallation
 %{_kde5_plugindir}/*.so
-%{_kde5_libdir}/libkonq.so.*
 %{_kde5_libdir}/libdolphinprivate.so.*
 %{_kde5_libdir}/libkdeinit5_dolphin.so
-%{_kde5_datadir}/kbookmark/directory_bookmarkbar.desktop
-%{_kde5_datadir}/kdm/
-%{_kde5_datadir}/konqueror/
-%{_kde5_datadir}/dolphin
 %{_kde5_datadir}/dolphinpart
 %{_datadir}/kservices5/
 %{_datadir}/kservicetypes5/
@@ -136,7 +131,6 @@ fi
 %files devel
 %defattr(-,root,root,-)
 %{_kde5_includedir}/*.h
-%{_kde5_libdir}/libkonq.so
 %{_kde5_libdir}/libdolphinprivate.so
 # >> files devel
 # << files devel
