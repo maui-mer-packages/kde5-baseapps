@@ -66,6 +66,15 @@ The %{name}-devel package contains the files necessary to develop applications
 that use %{name}.
 
 
+%package doc
+Summary:    Documentation and user manuals for %{name}
+Group:      Documentation
+Requires:   %{name} = %{version}-%{release}
+
+%description doc
+Documentation and user manuals for %{name}
+
+
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
@@ -127,15 +136,23 @@ fi
 %{_datadir}/config.kcfg/
 %{_datadir}/dbus-1/
 %{_datadir}/icons/hicolor/
+%exclude /dolphin/dolphinui.rc
 %{_kde5_sysconfdir}/xdg/servicemenu.knsrc
-%{_mandir}/man1/*
 # >> files
 # << files
 
 %files devel
 %defattr(-,root,root,-)
 %{_kde5_libdir}/libKF5Konq.so
+%{_libdir}/cmake/KF5Konq
 %{_kde5_includedir}/*
 %{_kde5_libdir}/libdolphinprivate.so
 # >> files devel
 # << files devel
+
+%files doc
+%defattr(-,root,root,-)
+%{_datadir}/doc/HTML/en/*
+%{_mandir}/man1/*
+# >> files doc
+# << files doc

@@ -84,8 +84,8 @@ Files:
     - "%{_datadir}/config.kcfg/"
     - "%{_datadir}/dbus-1/"
     - "%{_datadir}/icons/hicolor/"
+    - "%exclude /dolphin/dolphinui.rc"
     - "%{_kde5_sysconfdir}/xdg/servicemenu.knsrc"
-    - "%{_mandir}/man1/*"
 
 SubPackages:
     - Name: devel
@@ -96,5 +96,14 @@ SubPackages:
         that use %{name}.
       Files:
           - "%{_kde5_libdir}/libKF5Konq.so"
+          - "%{_libdir}/cmake/KF5Konq"
           - "%{_kde5_includedir}/*"
           - "%{_kde5_libdir}/libdolphinprivate.so"
+    - Name: doc
+      Group: Documentation
+      Summary: Documentation and user manuals for %{name}
+      Description: |
+        Documentation and user manuals for %{name}
+      Files:
+          - "%{_datadir}/doc/HTML/en/*"
+          - "%{_mandir}/man1/*"
