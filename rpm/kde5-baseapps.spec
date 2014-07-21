@@ -136,6 +136,7 @@ fi
 %{_datadir}/config.kcfg/
 %{_datadir}/dbus-1/
 %{_datadir}/icons/hicolor/
+%{_datadir}/appdata/dolphin.appdata.xml
 %exclude /dolphin/dolphinui.rc
 %{_kde5_sysconfdir}/xdg/servicemenu.knsrc
 # >> files
