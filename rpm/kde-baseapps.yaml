@@ -1,0 +1,110 @@
+Name         : kde-baseapps
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : Collection of applications used for file and Internet browsing
+Description  : |
+  Collection of applications used for file and Internet browsing
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - karchive-devel
+    - kbookmarks-devel
+    - kcoreaddons-devel
+    - kconfig-devel
+    - kconfigwidgets-devel
+    - kdbusaddons-devel
+    - kio-devel
+    - kdelibs4support-devel
+    - kparts-devel
+    - kdesu-devel
+    - kactivities-libs-devel
+    - knewstuff-devel
+    - kfilemetadata-devel
+    - kcmutils-devel
+    - baloo-devel
+    - baloo-widgets-devel
+    - phonon-qt5-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5PrintSupport
+    - Qt5Script
+    - zlib
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COPYING COPYING.LIB"
+    - "%{_kf5_bindir}/dolphin"
+    - "%{_kf5_bindir}/kdialog"
+    - "%{_kf5_bindir}/kfind"
+    - "%{_kf5_bindir}/kdepasswd"
+    - "%{_kf5_bindir}/servicemenuinstallation"
+    - "%{_kf5_bindir}/servicemenudeinstallation"
+    - "%{_kf5_plugindir}/*.so"
+    - "%{_kf5_libdir}/libKF5Konq.so.*"
+    - "%{_kf5_libdir}/libdolphinprivate.so.*"
+    - "%{_kf5_libdir}/libkdeinit5_dolphin.so"
+    - "%{_kf5_sharedir}/dolphinpart"
+    - "%{_kf5_datadir}/kbookmark"
+    - "%{_kf5_datadir}/konqueror"
+    - "%{_kf5_servicesdir}/*"
+    - "%{_kf5_servicetypesdir}/*"
+    - "%{_kf5_sharedir}/templates/"
+    - "%{_kf5_sharedir}/applications/"
+    - "%{_kf5_sharedir}/config.kcfg/"
+    - "%{_kf5_sharedir}/dbus-1/"
+    - "%{_kf5_sharedir}/icons/hicolor/"
+    - "%{_kf5_sharedir}/appdata/dolphin.appdata.xml"
+    - "%{_kf5_sharedir}/kxmlgui5/dolphin/dolphinui.rc"
+    - "%{_kf5_configdir}/servicemenu.knsrc"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Files:
+          - "%{_kf5_libdir}/libKF5Konq.so"
+          - "%{_kf5_cmakedir}/KF5Konq"
+          - "%{_kf5_includedir}/*"
+          - "%{_kf5_libdir}/libdolphinprivate.so"
+    - Name: doc
+      Group: Documentation
+      Summary: Documentation and user manuals for %{name}
+      Description: |
+        Documentation and user manuals for %{name}
+      Files:
+          - "%{_kf5_htmldir}/en/*"
+          - "%{_mandir}/man1/*"
