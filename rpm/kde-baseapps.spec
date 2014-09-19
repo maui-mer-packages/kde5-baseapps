@@ -8,6 +8,12 @@ Name:       kde-baseapps
 # >> macros
 # << macros
 
+# >> bcond_with
+# << bcond_with
+
+# >> bcond_without
+# << bcond_without
+
 Summary:    Collection of applications used for file and Internet browsing
 Version:    4.97.0
 Release:    1
@@ -131,6 +137,7 @@ fi
 %{_kf5_datadir}/konqueror
 %{_kf5_servicesdir}/*
 %{_kf5_servicetypesdir}/*
+%{_kf5_sharedir}/appdata/
 %{_kf5_sharedir}/templates/
 %{_kf5_sharedir}/applications/
 %{_kf5_sharedir}/config.kcfg/

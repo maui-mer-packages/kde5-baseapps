@@ -79,6 +79,7 @@ Files:
     - "%{_kf5_datadir}/konqueror"
     - "%{_kf5_servicesdir}/*"
     - "%{_kf5_servicetypesdir}/*"
+    - "%{_kf5_sharedir}/appdata/"
     - "%{_kf5_sharedir}/templates/"
     - "%{_kf5_sharedir}/applications/"
     - "%{_kf5_sharedir}/config.kcfg/"
