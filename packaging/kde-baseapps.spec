@@ -8,12 +8,6 @@ Name:       kde-baseapps
 # >> macros
 # << macros
 
-# >> bcond_with
-# << bcond_with
-
-# >> bcond_without
-# << bcond_without
-
 Summary:    Collection of applications used for file and Internet browsing
 Version:    4.97.0
 Release:    1
@@ -82,7 +76,7 @@ Documentation and user manuals for %{name}
 
 
 %prep
-%setup -q -n %{name}-%{version}/upstream
+%setup -q -n %{name}-%{version}
 
 # >> setup
 # << setup

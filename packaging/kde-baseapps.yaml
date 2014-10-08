@@ -7,7 +7,6 @@ Summary      : Collection of applications used for file and Internet browsing
 Description  : |
   Collection of applications used for file and Internet browsing
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
