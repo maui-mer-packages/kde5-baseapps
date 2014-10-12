@@ -52,6 +52,7 @@ BuildRequires:  baloo-devel
 BuildRequires:  baloo-widgets-devel
 BuildRequires:  phonon-qt5-devel
 BuildRequires:  khtml-devel
+BuildRequires:  kded-devel
 
 %description
 Collection of applications used for file and Internet browsing
