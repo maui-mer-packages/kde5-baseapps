@@ -41,6 +41,7 @@ PkgBR:
     - baloo-devel
     - baloo-widgets-devel
     - phonon-qt5-devel
+    - khtml-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
