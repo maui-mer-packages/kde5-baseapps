@@ -118,16 +118,10 @@ fi
 %files
 %defattr(-,root,root,-)
 %doc COPYING COPYING.LIB
-%{_kf5_bindir}/dolphin
-%{_kf5_bindir}/kdialog
-%{_kf5_bindir}/kfind
-%{_kf5_bindir}/kdepasswd
-%{_kf5_bindir}/servicemenuinstallation
-%{_kf5_bindir}/servicemenudeinstallation
+%{_kf5_bindir}/*
 %{_kf5_plugindir}/*.so
-%{_kf5_libdir}/libKF5Konq.so.*
-%{_kf5_libdir}/libdolphinprivate.so.*
-%{_kf5_libdir}/libkdeinit5_dolphin.so
+%{_kf5_libdir}/lib*.so.*
+%{_kf5_libdir}/libkdeinit5_*.so
 %{_kf5_sharedir}/dolphinpart
 %{_kf5_datadir}/kbookmark
 %{_kf5_datadir}/konqueror
@@ -141,6 +135,8 @@ fi
 %{_kf5_sharedir}/icons/hicolor/
 %{_kf5_sharedir}/appdata/dolphin.appdata.xml
 %{_kf5_sharedir}/kxmlgui5/dolphin/dolphinui.rc
+%{_kf5_sharedir}/konqueror/*
+%{_kf5_sharedir}/keditbookmarks/*
 %{_kf5_configdir}/servicemenu.knsrc
 # >> files
 # << files
@@ -148,9 +144,9 @@ fi
 %files devel
 %defattr(-,root,root,-)
 %{_kf5_libdir}/libKF5Konq.so
-%{_kf5_cmakedir}/KF5Konq
+%{_kf5_cmakedir}/*
 %{_kf5_includedir}/*
-%{_kf5_libdir}/libdolphinprivate.so
+%{_kf5_libdir}/lib*.so
 # >> files devel
 # << files devel
 
